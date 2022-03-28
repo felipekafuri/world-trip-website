@@ -1,4 +1,4 @@
-import { Box, Container, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Container, Flex, Grid, GridItem, Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import { Banner } from './components/Banner';
 import { LogoHeader } from './components/LogoHeader';
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <LogoHeader />
       <Banner />
       <Container maxW={1160} w="100%" h="100%">
-        <Box w="100%" mt={40}>
+        <Box w="100%" my={40}>
           <Grid templateColumns='repeat(5, 1fr)' gap={6}>
             <GridItem w='100%' h='100'>
               <Image
@@ -43,13 +43,21 @@ const Home: NextPage = () => {
               />
             </GridItem>
             <GridItem w='100%' h='100'>
-            <Image
-              src={more}
-              alt="Mais"
-            />
-          </GridItem>
-        </Grid>
-    </Box>
+              <Image
+                src={more}
+                alt="Mais"
+              />
+            </GridItem>
+          </Grid>
+        </Box>
+
+        <Flex>
+          <Box w="100%" h="100%">
+            <Heading as='h1' size='lg' color="gray.500" textAlign="center">
+              Vamos nessa?<br />Então escolha seu continente
+            </Heading>
+          </Box>
+        </Flex>
       </Container >
     </Box >
   )
